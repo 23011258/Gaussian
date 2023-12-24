@@ -18,13 +18,12 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 
 ## Program:
 ```
-
 '''Program to solve a matrix using Gaussian elimination without partial pivoting.
-Developed by: A.LAHARI
-RegisterNumber:23002931 
+Developed by: chandana Yendluri
+RegisterNumber: 23011258
 '''
 import numpy as np
-import sys 
+import sys
 n=int(input())
 a=np.zeros((n,n+1))
 x=np.zeros(n)
@@ -33,7 +32,7 @@ for i in range(n):
         a[i][j]=float(input())
 for i in range(n):
     if a[i][j]==0.0:
-        sys.exit('Divide by zero detected!')
+        sys.exit("Divide by zero detected!")
     for j in range(i+1,n):
         ratio=a[j][i]/a[i][i]
         for k in range(n+1):
@@ -45,13 +44,13 @@ for i in range(n-2,-1,-1):
         x[i]=x[i]-a[i][j]*x[j]
     x[i]=x[i]/a[i][i]
 for i in range(n):
-    print('X%d = %0.2f' %(i,x[i]),end=" ")
-        
+    print("X%d = %0.2f"%(i,x[i]),end=" ")
 ```
 
 ## Output:
 
-![image](https://github.com/AnnaLahari/Gaussian/assets/149365425/7d883c18-fab5-4618-8114-3825a8e0c38e)
+![Screenshot 2023-12-24 151222](https://github.com/23011258/Gaussian/assets/139842204/e14e2f9d-c8e6-4d3b-b150-f3d2db9c1d55)
+
 
 ## Result:
 Thus the program to find the solution of a matrix using Gaussian Elimination is written and verified using python programming.
